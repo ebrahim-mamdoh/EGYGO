@@ -1,5 +1,5 @@
 {
-  "name": "project-name",
+  "name": "EGYGO",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.3"
+    "@popperjs/core": "^2.11.8",
+    "@tanstack/react-query": "^5.90.2",
+    "axios": "^1.12.2",
+    "bootstrap": "^5.3.8",
+    "formik": "^2.4.6",
+    "generate-react-cli": "^9.1.0",
+    "next": "15.3.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "swiper": "^12.0.2",
+    "wavesurfer.js": "^7.11.0",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "eslint": "^8",
