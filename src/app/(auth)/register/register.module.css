@@ -1,6 +1,6 @@
 .registerWrapper {
   min-height: 100vh;
-  background: linear-gradient(180deg, #0b0710 0%, #180626 100%);
+  background: linear-gradient(-90.426deg, #E85F25 0%, rgba(248, 123, 69, 34%) 81%, rgba(252, 87, 16, 0%) 100%);
   color: #fff;
   padding: 20px;
 }
@@ -13,13 +13,10 @@
   border-radius: 16px;
   overflow: hidden;
   position: relative;
-  background: url("/images/2.svg") center/cover no-repeat;
+  background: url("/images/1.svg") center/cover no-repeat;
   box-shadow: 0 10px 40px rgba(0,0,0,0.6), inset 0 0 60px rgba(0,0,0,0.4);
 }
-.leftCard img{
-  width: 135px;
-  height: 135px;
-}
+ 
 /* النصوص اللي فوق الصورة */
 .imageText {
   position: absolute;
@@ -50,6 +47,12 @@
   
 }
 
+.logoImage {
+  width: 140px !important;   
+  height: 100px !important;  
+  object-fit: contain;     
+}
+
 @media (min-width: 768px) {
   .leftCard {
     height: 620px; /* ديسكتوب */
@@ -57,13 +60,27 @@
 }
 
 /* form */
-.form {
+/* .form {
   width: 100%;
   max-width: 480px;
   border-radius: 14px;
-  padding: 32px;
-}
+} */
 
+.formCard {
+   width: 100%;
+  max-width: 540px;
+  min-height: 620px;  
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+  padding: 16px 24px; /* أقل padding خارجياً، الفورم نفسه له padding داخلي */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 /* inputs */
 .input {
   width: 100% !important; /* override bootstrap */
@@ -105,10 +122,17 @@
   cursor: pointer;
   font-weight: 700;
   color: white;
-  background: linear-gradient(90deg, #ff2fcf 0%, #ff0077 50%);
+  background: var(--color-primary);
   box-shadow: 0 8px 20px rgba(255,47,207,0.14);
 }
-
+.linkBtn {
+  background: transparent;
+  border: none;
+  color: #00c4cc;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
 .secondaryBtn {
   margin-top: 10px;
   margin-bottom: 40px;

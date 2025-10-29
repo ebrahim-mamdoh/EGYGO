@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import styles from "./login.module.css";
-import { useAuth } from "@/context/AuthContext";
+import { useAuth } from "@/app/context/AuthContext";
 import Image from "next/image";
 
 export default function LoginPage() {
@@ -61,21 +61,10 @@ export default function LoginPage() {
   return (
     <div className={styles.registerWrapper}>
       <div className="row align-items-center min-vh-100 g-3 g-md-4">
-        {/* Left visual (الصورة) */}
-        <div className="col-12 col-md-6 d-flex justify-content-center order-1 order-md-2">
-          <div className={styles.leftCard}>
-            <div className={styles.imageText}>
-              <h1>
-                <img src="/images/logo.png" alt="Logo" width="100" height="100" />
-              </h1>
-              <h2>مرحبًا بك في EGYGO.</h2>
-              <p>  دليلك المحلي لاكتشاف مصر من منظور أهلها</p>
-            </div>
-          </div>
-        </div>
 
+        
         {/* Right form */}
-        <div className="col-12 col-md-6 d-flex justify-content-center order-2 order-md-1">
+        <div className=" col-md-6 d-flex justify-content-center order-2 order-md-2">
           <div className={styles.formCard}>
             <h2 className={`${styles.heading} text-center`}>تسجيل الدخول</h2>
             <p className={`${styles.hint} text-center`}>من فضلك ادخل بيانات حسابك</p>
@@ -130,12 +119,6 @@ export default function LoginPage() {
                 </button>
               </div>
 
-              <p className={`${styles.terms} text-center`}>
-                من خلال تسجيل الدخول فأنت توافق تلقائياً على
-                <span className={styles.highlight}> سياسة الخصوصية </span> و
-                <span className={styles.highlight}> شروط الاستخدام </span>
-              </p>
-
               <p className={`${styles.hint} text-center`} style={{ marginTop: 8 }}>
                 ليس لديك حساب؟{" "}
                 <button
@@ -145,10 +128,29 @@ export default function LoginPage() {
                 >
                   سجل الآن
                 </button>
+              </p>  
+              <p className={`${styles.terms} text-center`}>
+                من خلال تسجيل الدخول فأنت توافق تلقائياً على
+                <span className={styles.highlight}> سياسة الخصوصية </span> و
+                <span className={styles.highlight}> شروط الاستخدام </span>
               </p>
+
             </form>
           </div>
         </div>
+        {/* Left visual (الصورة) */}
+        <div className=" col-md-6 d-flex justify-content-center order-1 order-md-1">
+          <div className={styles.leftCard}>
+            <div className={styles.imageText}>
+              <h1>
+                <img src="/images/logo.png" alt="Logo" width="24" height="24" />
+              </h1>
+              <h2>مرحبا بكم في لقطها</h2>
+              <p>اطلب مني اللي تريده وخليني ألقطها عشانك</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );

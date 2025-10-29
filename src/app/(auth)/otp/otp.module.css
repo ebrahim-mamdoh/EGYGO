@@ -1,7 +1,6 @@
 /* إعادة استخدام نفس الأسماء والألوان لتطابق Register */
 .registerWrapper {
   min-height: 100vh;
-    /* background-image: url('/images/main-bg.png'); */
   background: linear-gradient(-90.426deg, #E85F25 0%, rgba(248, 123, 69, 34%) 81%, rgba(252, 87, 16, 0%) 100%);
   color: #fff;
   padding: 20px;
@@ -15,16 +14,21 @@
   border-radius: 16px;
   overflow: hidden;
   position: relative;
-  background: url("/images/2.svg") center/cover no-repeat;
+  background: url("/images/3.svg") center/cover no-repeat;
   box-shadow: 0 10px 40px rgba(0,0,0,0.6), inset 0 0 60px rgba(0,0,0,0.4);
 }
 
-.leftCard img {
+/* .leftCard img {
   width: 180px;
   height: 60px;
   object-fit: contain;
+} */
+ 
+.logoImage {
+  width: 140px !important;   
+  height: 100px !important;  
+  object-fit: contain;     
 }
-
 /* النصوص اللي فوق الصورة */
 .imageText {
   position: absolute;
@@ -60,11 +64,19 @@
 }
 
 /* فورم كارد داخلي للتباعد البسيط */
-
 .formCard {
   width: 100%;
-    max-width: 540px;
-    min-height: 620px;  
+  max-width: 480px;
+  border-radius: 14px;
+  padding: 16px 24px; /* أقل padding خارجياً، الفورم نفسه له padding داخلي */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.formCard {
+   width: 100%;
+  max-width: 540px;
+  min-height: 620px;  
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -76,8 +88,6 @@
   flex-direction: column;
   justify-content: center;
 }
-
-
 /* form */
 .form {
   width: 100%;
@@ -119,7 +129,7 @@
 
 /* primary / secondary buttons (مطابقة للتسجيل) */
 .primaryBtn {
-  width: 100%;
+  width: 60%;
   margin-top: 12px;
   padding: 12px;
   border-radius: 10px;
@@ -127,8 +137,12 @@
   cursor: pointer;
   font-weight: 700;
   color: white;
-  background: var(--color-primary);
+  background: var(--color-secondary);
   box-shadow: 0 8px 20px rgba(255,47,207,0.14);
+  
+}
+.primaryBtn :hover {
+  background: var(--color-primary);
 }
 
 /* social buttons row */
@@ -178,7 +192,7 @@ width: 100%;
 .linkBtn {
   background: transparent;
   border: none;
-  color: #fff;
+  color: #00c4cc;
   font-weight: 700;
   cursor: pointer;
   padding: 0;
@@ -198,12 +212,21 @@ width: 100%;
   background: linear-gradient(90deg, #2563eb 0%, #4f8cff 100%);
 }
 
+.resendLink{
+    background-color: transparent;
+    color: white;
+    border: none;
+}
 /* النصوص */
 .heading,
 .hint,
 .terms {
   text-align: center;
 }
+.heading{
+      padding: 30px 60px;
+}
+
 
 .hint,
 .terms {
@@ -215,11 +238,75 @@ width: 100%;
 }
 
 /* highlight links inside terms */
-.highlight
-
-{
-  color: #fff;
-  font-weight: 700;
+.highlight{
+  color: #00c4cc;  /* اللون المختلف */
+  font-weight: 600;
   cursor: pointer;
-  font-weight: bold;
+}
+
+.sccessWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  padding: 30px;
+}
+/* iput feild  */
+/* =========================
+   OTP Input Styles
+   ========================= */
+
+.otpInputs {
+  display: flex;
+  justify-content: center;
+  gap: 18px; /* المسافة بين الخانات */
+  margin: 25px 0;
+}
+
+.otpBox {
+  width: 65px;
+  height: 65px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  color: #ffffff;
+  outline: none;
+  caret-color: var(--color-primary);
+  transition: border-color 0.2s ease-in-out;
+}
+
+/* في حالة وجود نص داخل الخانة */
+.otpBox:not(:placeholder-shown) {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* إزالة أسهم الإدخال من النوع number (لو استخدم لاحقاً) */
+.otpBox::-webkit-inner-spin-button,
+.otpBox::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+@media (max-width: 768px) {
+  /* .cardWrap {
+    flex-direction: column;
+    gap: 18px;
+  } */
+
+  /* image card moves on top and gets fixed height 200px as requested */
+  .leftCard {
+    width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    height: 200px;
+    border-radius: 12px;
+  }
+  .heading{
+      padding: 0px;
+}
+
 }
