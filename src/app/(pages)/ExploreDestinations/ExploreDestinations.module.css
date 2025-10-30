@@ -1,0 +1,109 @@
+page.module.css
+/* --- Global & Typography --- */
+
+.ctaLink {
+  color: #00a67e; /* Teal/Green CTA Color */
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ctaLink:hover {
+  color: #007a5c;
+  text-decoration: underline;
+}
+
+/* --- Destination Card --- */
+
+.destinationCard {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  overflow: hidden; /* Ensures image corners are clipped */
+}
+
+.destinationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.cardImage {
+  /* Using object-fit to maintain aspect ratio and fill the space */
+  object-fit: cover;
+  /* Fixed height for visual consistency across cards */
+  height: 200px; 
+  width: 100%;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #212529;
+}
+
+.cardText {
+  font-size: 0.9rem;
+  color: #6c757d; /* Bootstrap's text-muted color */
+  line-height: 1.5;
+}
+
+/* --- Governorate Tile --- */
+
+.governorateTile {
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid transparent; /* Prevents layout shift on hover border */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.governorateTile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-color: #ddd;
+}
+
+.tileIcon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.tileTitle {
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+.tileDesc {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Pastel Background Colors for Tiles */
+.tileDefault {
+  background-color: #f8f9fa; /* Bootstrap's 'light' gray */
+}
+.tileGiza {
+  background-color: #e0f2f1; /* Mint */
+}
+.tileCairo {
+  background-color: #fdf8e1; /* Pale Yellow/Sand */
+}
+.tileAlexandria {
+  background-color: #e6f7ff; /* Pale Blue */
+}
+.tileLuxor {
+  background-color: #fff8f0; /* Pale Peach */
+}
+.tileAswan {
+  background-color: #f5f5f5; /* Light Beige/Gray */
+}
+.tileSharm {
+  background-color: #fce4ec; /* Pale Pink */
+}

@@ -1,0 +1,331 @@
+[
+  {
+    "destinationId": 1,
+    "name": "Pyramids of Giza",
+    "card": {
+      "image": "../images/destination/Giza.jpeg",
+      "shortDescription": "Stand in awe of the last remaining wonder of the ancient world."
+    },
+    "details": {
+      "title": "Unraveling the Mysteries Of Ancient Egypt",
+      "heroDescription": "The Pyramids of Giza, a monumental testament to human ingenuity and a gateway to millennia of history, await your exploration.",
+      "highlights": [
+        "Witness the grandeur of Khufu, Khafre, and Menkaure",
+        "Explore the secrets guarded by the Great Sphinx",
+        "A journey into 4,500 years of ancient Egyptian history"
+      ],
+      "cta": "Find a Buddy",
+      "overview": {
+        "title": "Destination Overview",
+        "content": [
+          "Egypt, a land of ancient wonders and timeless beauty, captivates travelers with its rich history, vibrant culture, and breathtaking landscapes.",
+          "From the towering pyramids and majestic temples to the bustling souks and serene Nile cruises, every corner of this country tells a story spanning millennia.",
+          "Beyond the iconic monuments, Egypt offers diverse experiences. Explore the underwater paradise of the Red Sea, trek through the vast Western Desert to discover hidden oases, or immerse yourself in the warm hospitality of its people.",
+          "Whether you're an archaeology enthusiast, an adventure seeker, or simply looking for a unique cultural immersion, Egypt promises an unforgettable journey."
+        ]
+      },
+      "quickFacts": {
+        "capital": "Cairo",
+        "population": "109 Million",
+        "language": "Arabic",
+        "currency": "Egyptian Pound (EGP)",
+        "bestTimeToVisit": "October to April"
+      },
+      "images": {
+        "heroImage": "/images/destinations/pyramids/hero.jpg",
+        "gallery": [
+          "/images/destinations/pyramids/01.jpg",
+          "/images/destinations/pyramids/02.jpg",
+          "/images/destinations/pyramids/03.jpg"
+        ]
+      },
+      "location": {
+        "country": "Egypt",
+        "city": "Giza",
+        "mapUrl": "https://maps.app.goo.gl/xyz-example"
+      }
+    }
+  },
+  {
+    "destinationId": 2,
+    "name": "Khan el-Khalili Bazaar",
+    "card": {
+      "image": "../images/destination/KhanElKhaliliBazaar.jpeg",
+      "shortDescription": "Cairo’s most iconic and vibrant bazaar—where history, culture, and craftsmanship meet."
+    },
+    "details": {
+      "title": "A Journey Through Cairo’s Historic Market",
+      "heroDescription": "Khan el-Khalili is a centuries-old marketplace buzzing with life, colors, and the scent of spices. A perfect blend of culture, shopping, and authentic Egyptian experiences.",
+      "highlights": [
+        "Ancient bazaar dating back to the 14th century",
+        "Traditional handcrafts, jewelry, perfumes, and souvenirs",
+        "Cafés with authentic Egyptian vibes—like El Fishawy Café",
+        "Live local interactions with artisans and merchants"
+      ],
+      "cta": "Find a Buddy",
+      "overview": {
+        "title": "Market Overview",
+        "content": [
+          "Located in the heart of Islamic Cairo, Khan el-Khalili Bazaar offers a journey into Egypt’s cultural soul.",
+          "Established in the late 1300s, the bazaar has served as a trading hub attracting explorers, artists, and merchants from around the world.",
+          "A walk through its narrow alleys reveals workshops, gold shops, spice stands, antique stores, and artisan crafts.",
+          "Sit at a traditional café, enjoy mint tea or Egyptian coffee, and watch the flow of life around you—every moment feels cinematic."
+        ]
+      },
+      "quickFacts": {
+        "capital": "Cairo",
+        "language": "Arabic (English widely understood in shops)",
+        "currency": "Egyptian Pound (EGP)",
+        "bestTimeToVisit": "Evening – when the bazaar is most lively"
+      },
+      "images": {
+        "heroImage": "/images/destinations/khan/hero.jpg",
+        "gallery": [
+          "/images/destinations/khan/01.jpg",
+          "/images/destinations/khan/02.jpg",
+          "/images/destinations/khan/03.jpg"
+        ]
+      },
+      "location": {
+        "country": "Egypt",
+        "city": "Cairo",
+        "mapUrl": "https://maps.app.goo.gl/fNcMVL4kNVYpU6XcA"
+      }
+    }
+  },
+  {
+    "destinationId": 3,
+    "name": "Alexandria Library",
+    "card": {
+      "image": "../images/destination/alex.jpeg",
+      "shortDescription": "A modern architectural marvel that revives the legacy of the ancient Library of Alexandria."
+    },
+    "details": {
+      "title": "Gateway to Knowledge & Mediterranean Culture",
+      "heroDescription": "Bibliotheca Alexandrina stands as a global cultural beacon overlooking the Mediterranean, combining modern architecture, culture, and history.",
+      "highlights": [
+        "Modern revival of the ancient Library of Alexandria",
+        "Over 8 million books in multiple languages",
+        "Museums, art galleries, and a state-of-the-art planetarium",
+        "Panoramic sea view from the outdoor promenade"
+      ],
+      "cta": "Find a Buddy",
+      "overview": {
+        "title": "Library Overview",
+        "content": [
+          "Alexandria Library is a cultural and academic landmark designed to honor the original library of antiquity.",
+          "The structure features a massive circular reading hall with natural sunlight that emulates a sun disk rising from the Mediterranean.",
+          "The library offers museums, rare manuscripts, art exhibitions, and a planetarium exploring science and astronomy.",
+          "It is a hub for intellectuals, researchers, and culture enthusiasts from all around the world."
+        ]
+      },
+      "quickFacts": {
+        "city": "Alexandria",
+        "language": "Arabic & English",
+        "currency": "Egyptian Pound (EGP)",
+        "bestTimeToVisit": "March to May & September to November"
+      },
+      "images": {
+        "heroImage": "/images/destinations/alexandria-library/hero.jpg",
+        "gallery": [
+          "/images/destinations/alexandria-library/01.jpg",
+          "/images/destinations/alexandria-library/02.jpg",
+          "/images/destinations/alexandria-library/03.jpg"
+        ]
+      },
+      "location": {
+        "country": "Egypt",
+        "city": "Alexandria",
+        "mapUrl": "https://maps.app.goo.gl/6xXo9b1fH2oR7Q9E7"
+      }
+    }
+  },
+  {
+    "destinationId": 4,
+    "name": "Citadel of Saladin",
+    "card": {
+      "image": "../images/destination/CitadelOfSaladin.jpeg",
+      "shortDescription": "Explore one of the most iconic medieval fortifications with breathtaking views of Cairo."
+    },
+    "details": {
+      "title": "A Fortress Overlooking Cairo’s Skyline",
+      "heroDescription": "Built in the 12th century, the Citadel stands as a testimony to Islamic architecture, military strategy, and historical significance.",
+      "highlights": [
+        "Panoramic views of Cairo from the citadel heights",
+        "Includes the stunning Mohamed Ali Mosque",
+        "Military museums and historic Ottoman architecture",
+        "UNESCO World Heritage Site inside Islamic Cairo"
+      ],
+      "cta": "Find a Buddy",
+      "overview": {
+        "title": "Citadel Overview",
+        "content": [
+          "The Citadel of Saladin was constructed as a military fortress to protect Cairo from the Crusaders.",
+          "It hosts several museums, weaponry collections, and the magnificent Mohamed Ali Mosque.",
+          "Visitors can enjoy one of the most impressive panoramic views of Cairo’s skyline.",
+          "A perfect mix between history, architecture, and photography opportunities."
+        ]
+      },
+      "quickFacts": {
+        "city": "Cairo",
+        "language": "Arabic & English",
+        "currency": "Egyptian Pound (EGP)",
+        "bestTimeToVisit": "October to April"
+      },
+      "images": {
+        "heroImage": "/images/destinations/citadel/hero.jpg",
+        "gallery": [
+          "/images/destinations/citadel/01.jpg",
+          "/images/destinations/citadel/02.jpg",
+          "/images/destinations/citadel/03.jpg"
+        ]
+      },
+      "location": {
+        "country": "Egypt",
+        "city": "Cairo",
+        "mapUrl": "https://maps.app.goo.gl/2mrkT3gzCE2mVj5aA"
+      }
+    }
+  },
+  {
+    "destinationId": 5,
+    "name": "Aswan Nile Cruise",
+    "card": {
+      "image": "../images/destination/aswan.jpeg",
+      "shortDescription": "Experience the magic of the Nile as you sail between ancient temples, Nubian culture, and stunning landscapes."
+    },
+    "details": {
+      "title": "Sail Through History & Tranquility",
+      "heroDescription": "A Nile cruise from Aswan offers a relaxing journey through Egypt’s heart, combining luxury accommodation with ancient history.",
+      "highlights": [
+        "Sail between Aswan and Luxor along the Nile",
+        "Visit Philae Temple, Kom Ombo, and Edfu Temple",
+        "5-star river cruise experience with dining and entertainment",
+        "Nubian cultural experience and stunning sunsets"
+      ],
+      "cta": "Find a Buddy",
+      "overview": {
+        "title": "Cruise Overview",
+        "content": [
+          "Nile cruises are one of the most iconic travel experiences in Egypt, blending relaxation with daily temple tours.",
+          "As the cruise sails through the Nile, guests witness scenic views of palm trees, villages, and historic monuments.",
+          "Onboard facilities include fine dining, sundecks, evening shows, and a full hospitality experience.",
+          "Ideal for travelers seeking culture, sightseeing, and slow-paced luxury."
+        ]
+      },
+      "quickFacts": {
+        "city": "Aswan",
+        "language": "Arabic (English widely spoken on cruises)",
+        "currency": "Egyptian Pound (EGP)",
+        "bestTimeToVisit": "October to March"
+      },
+      "images": {
+        "heroImage": "/images/destinations/aswan-cruise/hero.jpg",
+        "gallery": [
+          "/images/destinations/aswan-cruise/01.jpg",
+          "/images/destinations/aswan-cruise/02.jpg",
+          "/images/destinations/aswan-cruise/03.jpg"
+        ]
+      },
+      "location": {
+        "country": "Egypt",
+        "city": "Aswan",
+        "mapUrl": "https://maps.app.goo.gl/a9bt9Fq7ndf5fUtu5"
+      }
+    }
+  },
+  {
+    "destinationId": 6,
+    "name": "Luxor Temple Complex",
+    "card": {
+      "image": "../images/destination/luxor.jpeg",
+      "shortDescription": "Walk through ancient ceremonial pathways where Egypt’s most powerful pharaohs celebrated their divine authority."
+    },
+    "details": {
+      "title": "Where Pharaohs Were Crowned as Living Gods",
+      "heroDescription": "The Luxor Temple Complex is a breathtaking open-air museum, glowing under night lights and revealing thousands of years of history.",
+      "highlights": [
+        "The Avenue of Sphinxes linking Luxor Temple to Karnak",
+        "Colossal statues of Ramses II",
+        "Hieroglyphic walls narrating royal coronations and ceremonies",
+        "Stunning night visit experience"
+      ],
+      "cta": "Find a Buddy",
+      "overview": {
+        "title": "Temple Overview",
+        "content": [
+          "Luxor Temple was dedicated to the concept of kingship rather than a specific deity, making it unique among Egyptian temples.",
+          "It was the ceremonial site of the Opet Festival, where statues of Amun were carried from Karnak to Luxor Temple in celebration of renewal and divine power.",
+          "The Avenue of Sphinxes, recently reopened, connects Luxor Temple to Karnak in a 2.7 km procession path.",
+          "At night, the temple transforms into one of the most magical night experiences in Egypt with dramatic lighting and serene vibes."
+        ]
+      },
+      "quickFacts": {
+        "city": "Luxor",
+        "language": "Arabic (English and German widely spoken in tourism area)",
+        "currency": "Egyptian Pound (EGP)",
+        "bestTimeToVisit": "October to April (evening visits recommended)"
+      },
+      "images": {
+        "heroImage": "/images/destinations/luxor-temple/hero.jpg",
+        "gallery": [
+          "/images/destinations/luxor-temple/01.jpg",
+          "/images/destinations/luxor-temple/02.jpg",
+          "/images/destinations/luxor-temple/03.jpg"
+        ]
+      },
+      "location": {
+        "country": "Egypt",
+        "city": "Luxor",
+        "mapUrl": "https://maps.app.goo.gl/pFfXsYqi6ohqS8qk8"
+      }
+    }
+  },
+  {
+    "destinationId": 7,
+    "name": "Dahab Blue Hole",
+    "card": {
+      "image": "../images/destination/dahab.jpeg",
+      "shortDescription": "Experience turquoise waters, coral reefs, and one of the world’s most iconic diving spots."
+    },
+    "details": {
+      "title": "The Most Legendary Dive Site in the Red Sea",
+      "heroDescription": "The Blue Hole in Dahab is a natural marine sinkhole surrounded by vibrant coral reefs and crystal-clear waters—perfect for diving, snorkeling, and relaxation.",
+      "highlights": [
+        "World-famous diving site with crystal visibility",
+        "Home to colorful coral reefs and marine life",
+        "Relaxing Bedouin-style beach area",
+        "Diving entry point to the iconic ‘Arch’ descent"
+      ],
+      "cta": "Find a Buddy",
+      "overview": {
+        "title": "Blue Hole Overview",
+        "content": [
+          "Dahab’s Blue Hole is one of the most visually striking natural dive sites, attracting divers from around the world.",
+          "Even without diving, visitors enjoy snorkeling in shallow areas rich with colorful coral and fish.",
+          "The surrounding coastline is lined with chill Bedouin cafés, where you can relax on cushions by the water, drink Bedouin tea, or enjoy fresh seafood.",
+          "Whether you’re diving or simply chilling, Blue Hole offers serenity unmatched anywhere else in the Red Sea."
+        ]
+      },
+      "quickFacts": {
+        "city": "Dahab",
+        "language": "Arabic (English widely spoken)",
+        "currency": "Egyptian Pound (EGP)",
+        "bestTimeToVisit": "March to May & September to November"
+      },
+      "images": {
+        "heroImage": "/images/destinations/dahab-blue-hole/hero.jpg",
+        "gallery": [
+          "/images/destinations/dahab-blue-hole/01.jpg",
+          "/images/destinations/dahab-blue-hole/02.jpg",
+          "/images/destinations/dahab-blue-hole/03.jpg"
+        ]
+      },
+      "location": {
+        "country": "Egypt",
+        "city": "Dahab",
+        "mapUrl": "https://maps.app.goo.gl/SyTtwiVJMBivVQqx8"
+      }
+    }
+  }
+]

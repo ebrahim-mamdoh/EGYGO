@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import BootstrapClient from "@/app/lib/BootstrapClient"; // ✅
+import Navbar from "@/app/components/Navbar";
+import QueryProvider from "@/app/components/QueryProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +19,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <BootstrapClient /> {/* Loads Bootstrap JS safely on client */}
-        {children}
+        <QueryProvider>
+          <Navbar />
+          <main style={{ paddingTop: '80px' }}>
+            {children}
+          </main>
+        </QueryProvider>
       </body>
     </html>
   );
