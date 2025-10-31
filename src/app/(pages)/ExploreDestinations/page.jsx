@@ -1,3 +1,4 @@
+// Data source: /public/data/destinations.json — auto-mapped for cards
 "use client";
 
 import React from 'react';
@@ -92,27 +93,48 @@ const MOCK_GOVERNORATES = [
 // --- API Fetchers ---
 
 /**
- * NOTE: Create a dedicated axios instance for production:
- *
- * import axios from 'axios';
- * const api = axios.create({
- * baseURL: process.env.NEXT_PUBLIC_API_URL,
- * headers: { 'Authorization': `Bearer ${token}` }
- * });
- *
- * And use `api.get('/destinations')` below.
+ * Data source: /public/data/destinations.json — auto-mapped for cards
+ * For production: replace with real backend API endpoints
  */
 
+//
+// helper to generate slug
+//
+const makeSlug = (name = "") =>
+  name
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9\-]/g, "");
+
+//
+// helper to normalize image path
+//
+const normalizeImagePath = (img = "") => {
+  if (!img) return "/images/default-destination.jpg";
+  if (img.startsWith("/")) return img;
+  return "/" + img.replace(/^\.\.\/+/, "").replace(/^\/+/, "");
+};
+
+//
+// fetchDestinations implementation
+//
 const fetchDestinations = async () => {
-  // TODO: Replace with your actual backend endpoint
-  const endpoint = '/api/destinations';
   try {
-    const { data } = await axios.get(endpoint);
-    return data && data.length > 0 ? data : MOCK_DESTINATIONS;
-  } catch (error) {
-    // For development: if API endpoint doesn't exist (404) or any other error,
-    // return mock data instead of throwing to provide a smooth development experience
-    console.warn("API endpoint not available, using mock data:", error.message);
+    const res = await axios.get("/data/destinations.json");
+    const data = Array.isArray(res.data) ? res.data : [];
+
+    const formatted = data.map((dest) => ({
+      destinationId: dest.destinationId,
+      slug: makeSlug(dest.name),
+      title: dest.name,
+      subtitle: dest.card?.shortDescription || "",
+      imageUrl: normalizeImagePath(dest.card?.image),
+    }));
+
+    return formatted.length ? formatted : MOCK_DESTINATIONS;
+  } catch (err) {
+    console.warn("Could not load /data/destinations.json — using fallback MOCK.", err.message || err);
     return MOCK_DESTINATIONS;
   }
 };
@@ -171,7 +193,7 @@ const DestinationCard = ({ title, subtitle, imageUrl, slug }) => (
       <h5 className={`card-title fw-bold ${styles.cardTitle}`}>{title}</h5>
       <p className={`card-text ${styles.cardText} mb-3`}>{subtitle}</p>
       <Link
-        href={`/guides/${slug}`}
+        href={`/destinations/${slug}`}
         className={`mt-auto align-self-start ${styles.ctaLink}`}
       >
         View Guides &gt;
@@ -210,7 +232,6 @@ export default function ExploreDestinations() {
     isError: isErrorDestinations,
   } = useQuery({
     queryKey: ['destinations'],
-    queryKeyHash: 'destinations', // Added for clarity
     queryFn: fetchDestinations,
   });
 
@@ -220,7 +241,6 @@ export default function ExploreDestinations() {
     isError: isErrorGovernorates,
   } = useQuery({
     queryKey: ['governorates'],
-    queryKeyHash: 'governorates', // Added for clarity
     queryFn: fetchGovernorates,
   });
 
@@ -273,3 +293,19 @@ export default function ExploreDestinations() {
     </div>
   );
 }
+
+/*
+ * COPILOT CHANGES SUMMARY:
+ * - Modified fetchDestinations() to read from /data/destinations.json
+ * - Added makeSlug() helper for URL-friendly slug generation
+ * - Added normalizeImagePath() helper for image path handling
+ * - Updated Link href from /guides/ to /destinations/
+ * - Removed queryKeyHash properties from useQuery calls
+ * - Added data source comment at top of file
+ *
+ * MANUAL VERIFICATION CHECKLIST:
+ * □ Page loads without console errors
+ * □ Cards render with image, title, subtitle
+ * □ Clicking a card navigates to /destinations/{slug}
+ * □ If JSON missing or invalid, MOCK_DESTINATIONS renders
+ */
