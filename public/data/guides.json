@@ -1,0 +1,1141 @@
+[
+  { 
+    "id": 1,
+    "slug": "ahmed-ali",
+    "card": {
+      "name": "Ahmed Ali",
+      "avatar": "/images/guides/ahmed-ali.png",
+      "rating": 4.9,
+      "reviewsCount": 54,
+      "pricePerHour": 35,
+      "specialization": "Egyptologist – Cairo & Giza"
+    },
+    "filters": {
+      "serviceLocations": ["Cairo", "Giza"],
+      "landmarkSpecialties": [
+        "Pyramids of Giza",
+        "Khan el-Khalili Bazaar",
+        "Egyptian Museum"
+      ],
+      "languages": ["Arabic", "English", "French", "German"],
+      "maxPricePerHour": 35,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "As a seasoned Egyptologist and a proud local of Cairo, I've dedicated my life to unraveling the mysteries of ancient Egypt. My passion lies in bringing history to life, making every stone and hieroglyph tell a story. With over 10 years of experience guiding tourists from across the globe, I specialize in personalized tours of the Giza Pyramids, Khan el-Khalili bazaar, and the Egyptian Museum. I believe in creating unforgettable experiences that connect you deeply with Egypt's vibrant culture and rich heritage. Let's explore together!",
+      "verified": true,
+      "certifications": [
+        "Verified — Cairo University, Faculty of Egyptology",
+        "Licensed by the Egyptian Tourism Authority"
+      ],
+      "languages": ["Arabic", "English", "French", "German"],
+      "hourlyRate": 35,
+      "flashInfo": {
+        "experienceYears": 10,
+        "mainCity": "Cairo",
+        "skills": [
+          "Storytelling",
+          "Photography Assistance",
+          "Private Tour Planning",
+          "Museum Interpretation"
+        ]
+      },
+      "gallery": [
+        "/images/trips/ahmed/pyramids-tour-01.jpg",
+        "/images/trips/ahmed/museum-tour-02.jpg",
+        "/images/trips/ahmed/khan-el-khalili-03.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Sarah J.",
+          "rating": 5,
+          "review": "Ahmed made our trip to the pyramids truly magical! His knowledge is incredible, and his stories brought everything to life. Highly recommend!",
+          "date": "2024-02-14"
+        },
+        {
+          "name": "Mark T.",
+          "rating": 5,
+          "review": "Best guide we could have asked for. Fluent in German, very friendly, and tailored the tour perfectly to our interests.",
+          "date": "2024-03-02"
+        },
+        {
+          "name": "Emily R.",
+          "rating": 4,
+          "review": "Great experience with Ahmed. Informative and engaging, though I wished we had more time at the museum.",
+          "date": "2024-04-09"
+        },
+        {
+          "name": "David C.",
+          "rating": 5,
+          "review": "Fantastic! Ahmed's passion for Egypt is contagious. Booking again for our next visit!",
+          "date": "2024-06-21"
+        }
+      ]
+    }
+  },
+
+  {
+    "id": 2,
+    "slug": "mona-samir",
+    "card": {
+      "name": "Mona Samir",
+      "avatar": "/images/guides/mona-samir.png",
+      "rating": 4.8,
+      "reviewsCount": 41,
+      "pricePerHour": 30,
+      "specialization": "Alexandria & Mediterranean Coast"
+    },
+    "filters": {
+      "serviceLocations": ["Alexandria"],
+      "landmarkSpecialties": [
+        "Alexandria Library & Citadel",
+        "Corniche Alexandria"
+      ],
+      "languages": ["Arabic", "English", "Italian"],
+      "maxPricePerHour": 30,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "I was born and raised in Alexandria, the Mediterranean Pearl. I specialize in cultural walking tours, food experiences, and photographic journeys through Alexandria Library, Citadel of Qaitbay, and historic downtown architecture.",
+      "verified": true,
+      "certifications": ["Alexandria University — History & Tourism"],
+      "languages": ["Arabic", "English", "Italian"],
+      "hourlyRate": 30,
+      "flashInfo": {
+        "experienceYears": 7,
+        "mainCity": "Alexandria",
+        "skills": ["Historical Tours", "Food Experience", "Sea Tour Planning"]
+      },
+      "gallery": [
+        "/images/trips/mona/citadel-01.jpg",
+        "/images/trips/mona/bibliotheca-02.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Kevin L.",
+          "rating": 5,
+          "review": "Her storytelling and energy are unmatched. Loved every minute!",
+          "date": "2024-03-18"
+        }
+      ]
+    }
+  }
+,
+  {
+    "id": 1,
+    "slug": "omar-el-sayed",
+    "card": {
+      "name": "Omar El Sayed",
+      "avatar": "/images/guides/omar.webp",
+      "rating": 4.9,
+      "reviewsCount": 120,
+      "pricePerHour": 25,
+      "specialization": "Dahab — Blue Hole Diving Experiences"
+    },
+    "filters": {
+      "serviceLocations": ["Dahab"],
+      "landmarkSpecialties": ["Dahab Blue Hole"],
+      "languages": ["Arabic", "English"],
+      "maxPricePerHour": 25,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "Professional diving instructor specializing in Blue Hole and underwater photography. I provide private snorkeling tours with full guidance and safety.",
+      "verified": true,
+      "certifications": ["PADI Certified Scuba Instructor"],
+      "languages": ["Arabic", "English"],
+      "hourlyRate": 25,
+      "flashInfo": {
+        "experienceYears": 7,
+        "mainCity": "Dahab",
+        "skills": ["Scuba Diving", "Underwater Photography", "Snorkeling Tours"]
+      },
+      "gallery": [
+        "/images/trips/omar/bluehole-01.jpg",
+        "/images/trips/omar/snorkeling-02.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Valentina R.",
+          "rating": 5,
+          "review": "Best diving experience! Omar knows Blue Hole like a map!",
+          "date": "2024-06-14"
+        }
+      ]
+    }
+  },
+
+  {
+    "id": 2,
+    "slug": "sara-khaled",
+    "card": {
+      "name": "Sara Khaled",
+      "avatar": "/images/guides/sara.webp",
+      "rating": 4.8,
+      "reviewsCount": 98,
+      "pricePerHour": 30,
+      "specialization": "Dahab — Hiking & Blue Hole"
+    },
+    "filters": {
+      "serviceLocations": ["Dahab"],
+      "landmarkSpecialties": ["Dahab Blue Hole", "Mount Sinai Trek"],
+      "languages": ["Arabic", "English", "French"],
+      "maxPricePerHour": 30,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "Adventure guide specializing in hiking and underwater experiences in Dahab.",
+      "verified": true,
+      "certifications": ["Adventure Hiking Certification — Egypt Tourism"],
+      "languages": ["Arabic", "English", "French"],
+      "hourlyRate": 30,
+      "flashInfo": {
+        "experienceYears": 6,
+        "mainCity": "Dahab",
+        "skills": ["Hiking Tours", "Desert Camping", "Blue Hole Snorkeling"]
+      },
+      "gallery": [
+        "/images/trips/sara/bluehole-01.jpg",
+        "/images/trips/sara/mountain-02.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Emily J.",
+          "rating": 5,
+          "review": "Best hiking guide in Dahab! She handled everything perfectly.",
+          "date": "2024-05-12"
+        }
+      ]
+    }
+  },
+
+  {
+    "id": 3,
+    "slug": "john-adams",
+    "card": {
+      "name": "John Adams",
+      "avatar": "/images/guides/john.webp",
+      "rating": 4.7,
+      "reviewsCount": 85,
+      "pricePerHour": 27,
+      "specialization": "Dahab — Diving & Photography"
+    },
+    "filters": {
+      "serviceLocations": ["Dahab"],
+      "landmarkSpecialties": ["Dahab Blue Hole"],
+      "languages": ["English", "German"],
+      "maxPricePerHour": 27,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "Certified scuba diving instructor, specialized in Blue Hole diving tours and underwater photography.",
+      "verified": true,
+      "certifications": ["PADI Rescue Diver"],
+      "languages": ["English", "German"],
+      "hourlyRate": 27,
+      "flashInfo": {
+        "experienceYears": 8,
+        "mainCity": "Dahab",
+        "skills": ["Underwater Photography", "Advanced Diving", "Safety & Training"]
+      },
+      "gallery": [
+        "/images/trips/john/bluehole-01.jpg",
+        "/images/trips/john/diving-02.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Oliver S.",
+          "rating": 5,
+          "review": "Incredible underwater photos. John is very professional!",
+          "date": "2024-08-02"
+        }
+      ]
+    }
+  },
+
+  {
+    "id": 4,
+    "slug": "mariam-samir",
+    "card": {
+      "name": "Mariam Samir",
+      "avatar": "/images/guides/mariam.webp",
+      "rating": 4.8,
+      "reviewsCount": 72,
+      "pricePerHour": 22,
+      "specialization": "Dahab — Bedouin Culture & Blue Hole"
+    },
+    "filters": {
+      "serviceLocations": ["Dahab"],
+      "landmarkSpecialties": ["Dahab Blue Hole", "Canyon"],
+      "languages": ["Arabic", "English", "Spanish"],
+      "maxPricePerHour": 22,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "Specialized in Bedouin culture, sunset camping, and beginner snorkeling tours.",
+      "verified": true,
+      "certifications": ["Certified Eco-Tour Guide — Dahab"],
+      "languages": ["Arabic", "English", "Spanish"],
+      "hourlyRate": 22,
+      "flashInfo": {
+        "experienceYears": 5,
+        "mainCity": "Dahab",
+        "skills": ["Camping", "Storytelling", "Snorkeling Guidance"]
+      },
+      "gallery": [
+        "/images/trips/mariam/desert-01.jpg",
+        "/images/trips/mariam/sunset-02.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Isabella M.",
+          "rating": 5,
+          "review": "Amazing cultural experience! Mariam made us feel like family.",
+          "date": "2024-07-19"
+        }
+      ]
+    }
+  },
+
+  {
+    "id": 5,
+    "slug": "ahmed-salah",
+    "card": {
+      "name": "Ahmed Salah",
+      "avatar": "/images/guides/ahmed.webp",
+      "rating": 4.6,
+      "reviewsCount": 56,
+      "pricePerHour": 20,
+      "specialization": "Dahab — Private Boat & Blue Hole Tours"
+    },
+    "filters": {
+      "serviceLocations": ["Dahab"],
+      "landmarkSpecialties": ["Dahab Blue Hole"],
+      "languages": ["Arabic", "English", "Italian"],
+      "maxPricePerHour": 20,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "Organizes private sea trips and snorkeling tours to the Blue Hole.",
+      "verified": false,
+      "certifications": [],
+      "languages": ["Arabic", "English", "Italian"],
+      "hourlyRate": 20,
+      "flashInfo": {
+        "experienceYears": 4,
+        "mainCity": "Dahab",
+        "skills": ["Boat Trip Planning", "Snorkeling", "Guest Safety"]
+      },
+      "gallery": [
+        "/images/trips/ahmed/boat-01.jpg"
+      ],
+      "reviews": []
+    }
+  },
+
+
+  {
+    "id": 6,
+    "slug": "nour-hassan",
+    "card": {
+      "name": "Nour Hassan",
+      "avatar": "/images/guides/nour.webp",
+      "rating": 5.0,
+      "reviewsCount": 164,
+      "pricePerHour": 35,
+      "specialization": "Luxor — Temple & Historical Tours"
+    },
+    "filters": {
+      "serviceLocations": ["Luxor"],
+      "landmarkSpecialties": ["Luxor Temple Complex"],
+      "languages": ["Arabic", "English"],
+      "maxPricePerHour": 35,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "Certified Egyptologist, specialized in Luxor Temple, Karnak, and Valley of the Kings.",
+      "verified": true,
+      "certifications": ["Ministry of Tourism Licensed Egyptologist"],
+      "languages": ["Arabic", "English"],
+      "hourlyRate": 35,
+      "flashInfo": {
+        "experienceYears": 10,
+        "mainCity": "Luxor",
+        "skills": ["Egyptology", "Temple Tours", "Storytelling"]
+      },
+      "gallery": [
+        "/images/trips/nour/luxor-01.jpg",
+        "/images/trips/nour/karnak-02.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Satoshi H.",
+          "rating": 5,
+          "review": "Deep knowledge. She made history come alive!",
+          "date": "2024-04-08"
+        }
+      ]
+    }
+  },
+
+  {
+    "id": 7,
+    "slug": "hassan-mahmoud",
+    "card": {
+      "name": "Hassan Mahmoud",
+      "avatar": "/images/guides/hassan.webp",
+      "rating": 4.9,
+      "reviewsCount": 110,
+      "pricePerHour": 32,
+      "specialization": "Luxor — Temple Storytelling Expert"
+    },
+    "filters": {
+      "serviceLocations": ["Luxor"],
+      "landmarkSpecialties": ["Luxor Temple Complex"],
+      "languages": ["Arabic", "English", "Spanish"],
+      "maxPricePerHour": 32,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "Known for converting history into real stories. Perfect for families and groups.",
+      "verified": true,
+      "certifications": ["Egyptology Diploma"],
+      "languages": ["Arabic", "English", "Spanish"],
+      "hourlyRate": 32,
+      "flashInfo": {
+        "experienceYears": 9,
+        "mainCity": "Luxor",
+        "skills": ["History Storytelling", "Temple Guidance", "Group Management"]
+      },
+      "gallery": [
+        "/images/trips/hassan/luxor-01.jpg"
+      ],
+      "reviews": []
+    }
+  },
+
+  {
+    "id": 8,
+    "slug": "clara-williams",
+    "card": {
+      "name": "Clara Williams",
+      "avatar": "/images/guides/clara.webp",
+      "rating": 4.7,
+      "reviewsCount": 77,
+      "pricePerHour": 28,
+      "specialization": "Luxor — Nile & Temple Tours"
+    },
+    "filters": {
+      "serviceLocations": ["Luxor"],
+      "landmarkSpecialties": ["Luxor Temple Complex"],
+      "languages": ["English", "French"],
+      "maxPricePerHour": 28,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "Luxury cruise trip planner + guided temple tours.",
+      "verified": true,
+      "certifications": [],
+      "languages": ["English", "French"],
+      "hourlyRate": 28,
+      "flashInfo": {
+        "experienceYears": 5,
+        "mainCity": "Luxor",
+        "skills": ["Nile Cruises", "Photography Tours", "Luxury Planning"]
+      },
+      "gallery": [
+        "/images/trips/clara/nile-01.jpg"
+      ],
+      "reviews": []
+    }
+  },
+
+  {
+    "id": 9,
+    "slug": "youssef-adel",
+    "card": {
+      "name": "Youssef Adel",
+      "avatar": "/images/guides/youssef.webp",
+      "rating": 4.8,
+      "reviewsCount": 89,
+      "pricePerHour": 30,
+      "specialization": "Luxor — Temples & Family Tours"
+    },
+    "filters": {
+      "serviceLocations": ["Luxor"],
+      "landmarkSpecialties": ["Luxor Temple Complex"],
+      "languages": ["Arabic", "German"],
+      "maxPricePerHour": 30,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "Focus on family-friendly and senior-friendly temple tours.",
+      "verified": true,
+      "certifications": [],
+      "languages": ["Arabic", "German"],
+      "hourlyRate": 30,
+      "flashInfo": {
+        "experienceYears": 6,
+        "mainCity": "Luxor",
+        "skills": ["Comfort Tours", "Temple Guide", "German Interpretation"]
+      },
+      "gallery": [
+        "/images/trips/youssef/temple-01.jpg"
+      ],
+      "reviews": []
+    }
+  },
+
+  {
+    "id": 10,
+    "slug": "fatma-reda",
+    "card": {
+      "name": "Fatma Reda",
+      "avatar": "/images/guides/fatma.webp",
+      "rating": 4.6,
+      "reviewsCount": 70,
+      "pricePerHour": 24,
+      "specialization": "Luxor — Cultural & Photography Tours"
+    },
+    "filters": {
+      "serviceLocations": ["Luxor"],
+      "landmarkSpecialties": ["Luxor Temple Complex"],
+      "languages": ["Arabic", "English"],
+      "maxPricePerHour": 24,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "Offers photography-focused temple tours with storytelling.",
+      "verified": false,
+      "certifications": [],
+      "languages": ["Arabic", "English"],
+      "hourlyRate": 24,
+      "flashInfo": {
+        "experienceYears": 4,
+        "mainCity": "Luxor",
+        "skills": ["Photography Planning", "Temple Guiding", "Culture Sharing"]
+      },
+      "gallery": [],
+      "reviews": []
+    }
+  },
+
+
+  {
+    "id": 11,
+    "slug": "mohamed-nabil",
+    "card": {
+      "name": "Mohamed Nabil",
+      "avatar": "/images/guides/mnabil.webp",
+      "rating": 4.9,
+      "reviewsCount": 143,
+      "pricePerHour": 33,
+      "specialization": "Alexandria — Library & Citadel Culture Tours"
+    },
+    "filters": {
+      "serviceLocations": ["Alexandria"],
+      "landmarkSpecialties": ["Alexandria Library & Citadel"],
+      "languages": ["Arabic", "English"],
+      "maxPricePerHour": 33,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "Historian specialized in Alexandria's architecture & cultural tours.",
+      "verified": true,
+      "certifications": ["Bibliotheca Alexandrina Tour Certification"],
+      "languages": ["Arabic", "English"],
+      "hourlyRate": 33,
+      "flashInfo": {
+        "experienceYears": 8,
+        "mainCity": "Alexandria",
+        "skills": ["Historical Research", "Architecture Tours", "Citadel History"]
+      },
+      "gallery": ["/images/trips/mnabil/library-01.jpg"],
+      "reviews": []
+    }
+  },
+
+  {
+    "id": 12,
+    "slug": "emily-carter",
+    "card": {
+      "name": "Emily Carter",
+      "avatar": "/images/guides/emily.webp",
+      "rating": 4.6,
+      "reviewsCount": 65,
+      "pricePerHour": 26,
+      "specialization": "Alexandria — Citadel Architecture Tours"
+    },
+    "filters": {
+      "serviceLocations": ["Alexandria"],
+      "landmarkSpecialties": ["Alexandria Library & Citadel"],
+      "languages": ["English"],
+      "maxPricePerHour": 26,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "Specialized in architectural tours for foreigners.",
+      "verified": true,
+      "certifications": [],
+      "languages": ["English"],
+      "hourlyRate": 26,
+      "flashInfo": {
+        "experienceYears": 5,
+        "mainCity": "Alexandria",
+        "skills": ["Architecture", "Historical Walks", "Citadel Storytelling"]
+      },
+      "gallery": [],
+      "reviews": []
+    }
+  },
+
+  {
+    "id": 13,
+    "slug": "salma-farouk",
+    "card": {
+      "name": "Salma Farouk",
+      "avatar": "/images/guides/salma.webp",
+      "rating": 4.8,
+      "reviewsCount": 92,
+      "pricePerHour": 32,
+      "specialization": "Alexandria — Library Cultural Experience"
+    },
+    "filters": {
+      "serviceLocations": ["Alexandria"],
+      "landmarkSpecialties": ["Alexandria Library & Citadel"],
+      "languages": ["Arabic", "French"],
+      "maxPricePerHour": 32,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "Focuses on literature, art, and storytelling inside the library museum.",
+      "verified": true,
+      "certifications": ["Cultural Tour License"],
+      "languages": ["Arabic", "French"],
+      "hourlyRate": 32,
+      "flashInfo": {
+        "experienceYears": 6,
+        "mainCity": "Alexandria",
+        "skills": ["Museum Narration", "Cultural Guidance", "French Interpretation"]
+      },
+      "gallery": [],
+      "reviews": []
+    }
+  },
+
+  {
+    "id": 14,
+    "slug": "yehia-mansour",
+    "card": {
+      "name": "Yehia Mansour",
+      "avatar": "/images/guides/yehia.webp",
+      "rating": 4.7,
+      "reviewsCount": 80,
+      "pricePerHour": 29,
+      "specialization": "Alexandria — Citadel & Sea Coast Tours"
+    },
+    "filters": {
+      "serviceLocations": ["Alexandria"],
+      "landmarkSpecialties": ["Alexandria Library & Citadel"],
+      "languages": ["Arabic", "English", "Russian"],
+      "maxPricePerHour": 29,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "Specialized in Russian tourist groups and coastal sea walks.",
+      "verified": true,
+      "certifications": [],
+      "languages": ["Arabic", "English", "Russian"],
+      "hourlyRate": 29,
+      "flashInfo": {
+        "experienceYears": 5,
+        "mainCity": "Alexandria",
+        "skills": ["Russian Interpretation", "Sea Tours", "Citadel Walkthroughs"]
+      },
+      "gallery": [],
+      "reviews": []
+    }
+  },
+
+  {
+    "id": 15,
+    "slug": "karim-fouad",
+    "card": {
+      "name": "Karim Fouad",
+      "avatar": "/images/guides/karim.webp",
+      "rating": 4.6,
+      "reviewsCount": 60,
+      "pricePerHour": 23,
+      "specialization": "Alexandria — Academic Library Tours"
+    },
+    "filters": {
+      "serviceLocations": ["Alexandria"],
+      "landmarkSpecialties": ["Alexandria Library & Citadel"],
+      "languages": ["Arabic", "English", "Italian"],
+      "maxPricePerHour": 23,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "Specialized in student and academic tours inside the library.",
+      "verified": false,
+      "certifications": [],
+      "languages": ["Arabic", "English", "Italian"],
+      "hourlyRate": 23,
+      "flashInfo": {
+        "experienceYears": 3,
+        "mainCity": "Alexandria",
+        "skills": ["Academic Tours", "Library Navigation", "Italian Interpretation"]
+      },
+      "gallery": [],
+      "reviews": []
+    }
+  }
+
+,
+  {
+    "id": 1,
+    "slug": "youssef-hamdy",
+    "card": {
+      "name": "Youssef Hamdy",
+      "avatar": "/images/guides/youssef-hamdy.png",
+      "rating": 4.9,
+      "reviewsCount": 63,
+      "pricePerHour": 55,
+      "specialization": "Egyptologist – Giza Pyramids & Ancient Civilizations"
+    },
+    "filters": {
+      "serviceLocations": ["Giza", "Cairo"],
+      "landmarkSpecialties": ["Pyramids of Giza", "Sphinx", "Grand Egyptian Museum"],
+      "languages": ["Arabic", "English", "Spanish"],
+      "maxPricePerHour": 55,
+      "minRating": 4.7
+    },
+    "profile": {
+      "aboutMe": "Professional Egyptologist with over 12 years guiding travelers through the Pyramids of Giza and the Sphinx. I make ancient history exciting through storytelling and interactive explanations.",
+      "verified": true,
+      "certifications": [
+        "Egyptian Ministry of Tourism License",
+        "Bachelor’s in Egyptology – Cairo University"
+      ],
+      "languages": ["Arabic", "English", "Spanish"],
+      "hourlyRate": 55,
+      "flashInfo": {
+        "experienceYears": 12,
+        "mainCity": "Giza",
+        "skills": ["Photography Spots Expert", "Camel Tour Coordination", "Private VIP Tours"]
+      },
+      "gallery": [
+        "/images/trips/youssef-hamdy/giza-01.jpg",
+        "/images/trips/youssef-hamdy/giza-02.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Anna D.",
+          "rating": 5,
+          "review": "Youssef turned a dream into reality — got us the BEST photo spots with zero crowds!",
+          "date": "2024-03-01"
+        },
+        {
+          "name": "Lucas H.",
+          "rating": 5,
+          "review": "Super knowledgeable and funny. Felt like we knew him forever!",
+          "date": "2024-04-10"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "slug": "salma-fouad",
+    "card": {
+      "name": "Salma Fouad",
+      "avatar": "/images/guides/salma-fouad.png",
+      "rating": 4.8,
+      "reviewsCount": 47,
+      "pricePerHour": 40,
+      "specialization": "History & Cultural Tours – Giza & Cairo"
+    },
+    "filters": {
+      "serviceLocations": ["Cairo", "Giza"],
+      "landmarkSpecialties": ["Pyramids of Giza", "Khan el-Khalili Bazaar"],
+      "languages": ["Arabic", "English", "Italian"],
+      "maxPricePerHour": 40,
+      "minRating": 4.6
+    },
+    "profile": {
+      "aboutMe": "I love connecting travelers with the hidden angles of Cairo — culture, local markets, and authentic Egyptian street food.",
+      "verified": true,
+      "certifications": ["Cairo Tourism Institute"],
+      "languages": ["Arabic", "English", "Italian"],
+      "hourlyRate": 40,
+      "flashInfo": {
+        "experienceYears": 8,
+        "mainCity": "Cairo",
+        "skills": ["Food Tours", "Storytelling", "Market Negotiation"]
+      },
+      "gallery": [
+        "/images/trips/salma-fouad/pyramids-01.jpg",
+        "/images/trips/salma-fouad/khan-02.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Clara W.",
+          "rating": 5,
+          "review": "Loved her energy! She knows every single corner of Cairo. Amazing experience.",
+          "date": "2024-02-20"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "slug": "khaled-mostafa",
+    "card": {
+      "name": "Khaled Mostafa",
+      "avatar": "/images/guides/khaled-mostafa.png",
+      "rating": 4.7,
+      "reviewsCount": 38,
+      "pricePerHour": 28,
+      "specialization": "Adventure & Camel Tours"
+    },
+    "filters": {
+      "serviceLocations": ["Giza"],
+      "landmarkSpecialties": ["Pyramids of Giza", "Sphinx"],
+      "languages": ["Arabic", "English"],
+      "maxPricePerHour": 28,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "If you want stunning camel-ride photos with postcard views of the pyramids — I’m your guy.",
+      "verified": true,
+      "certifications": ["Egyptian Tour Guide Syndicate"],
+      "languages": ["Arabic", "English"],
+      "hourlyRate": 28,
+      "flashInfo": {
+        "experienceYears": 5,
+        "mainCity": "Giza",
+        "skills": ["Camel Tours", "Drone Photography Assistance"]
+      },
+      "gallery": [
+        "/images/trips/khaled-mostafa/camel-01.jpg",
+        "/images/trips/khaled-mostafa/pyramids-02.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "John S.",
+          "rating": 4.5,
+          "review": "Super friendly and knows where to get perfect photos!",
+          "date": "2024-05-04"
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "slug": "mariam-saad",
+    "card": {
+      "name": "Mariam Saad",
+      "avatar": "/images/guides/mariam-saad.png",
+      "rating": 4.6,
+      "reviewsCount": 52,
+      "pricePerHour": 22,
+      "specialization": "Budget-Friendly Tours"
+    },
+    "filters": {
+      "serviceLocations": ["Giza", "Cairo"],
+      "landmarkSpecialties": ["Pyramids of Giza", "Egyptian Museum"],
+      "languages": ["Arabic", "English", "Spanish"],
+      "maxPricePerHour": 22,
+      "minRating": 4.5
+    },
+    "profile": {
+      "aboutMe": "Affordable tours without compromising on quality or experience.",
+      "verified": true,
+      "certifications": ["Tourism & Hotels – Helwan University"],
+      "languages": ["Arabic", "English", "Spanish"],
+      "hourlyRate": 22,
+      "flashInfo": {
+        "experienceYears": 4,
+        "mainCity": "Cairo",
+        "skills": ["Budget Planning", "Local Food Insights"]
+      },
+      "gallery": [
+        "/images/trips/mariam-saad/giza-01.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Felipe M.",
+          "rating": 5,
+          "review": "Best value for money tour. Loved every stop!",
+          "date": "2024-06-29"
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "slug": "hassan-omar",
+    "card": {
+      "name": "Hassan Omar",
+      "avatar": "/images/guides/hassan-omar.png",
+      "rating": 4.9,
+      "reviewsCount": 71,
+      "pricePerHour": 70,
+      "specialization": "VIP & Exclusive Pyramids Access"
+    },
+    "filters": {
+      "serviceLocations": ["Giza"],
+      "landmarkSpecialties": ["Pyramids of Giza", "Sphinx"],
+      "languages": ["Arabic", "English", "Russian"],
+      "maxPricePerHour": 70,
+      "minRating": 4.8
+    },
+    "profile": {
+      "aboutMe": "VIP licensed guide. Skip-the-line access and private security at restricted areas inside the Pyramids.",
+      "verified": true,
+      "certifications": [
+        "VIP Tourism License",
+        "Ministry of Tourism Special Access Badge"
+      ],
+      "languages": ["Arabic", "English", "Russian"],
+      "hourlyRate": 70,
+      "flashInfo": {
+        "experienceYears": 14,
+        "mainCity": "Giza",
+        "skills": ["VIP Tours", "Luxury Itinerary Planning"]
+      },
+      "gallery": [
+        "/images/trips/hassan-omar/vip-01.jpg",
+        "/images/trips/hassan-omar/inside-pyramid-02.jpg"
+      ],
+      "reviews": [
+        {
+          "name": "Victoria P.",
+          "rating": 5,
+          "review": "Private access inside the pyramid. Worth every dollar!",
+          "date": "2024-03-17"
+        }
+      ]
+    }
+  }
+,
+{
+  "id": 6,
+  "slug": "ali-hassan",
+  "card": {
+    "name": "Ali Hassan",
+    "avatar": "/images/guides/ali-hassan.png",
+    "rating": 4.9,
+    "reviewsCount": 58,
+    "pricePerHour": 60,
+    "specialization": "Luxury Nile Cruise & Philae Temple Expert"
+  },
+  "filters": {
+    "serviceLocations": ["Aswan"],
+    "landmarkSpecialties": ["Aswan Nile Cruise", "Philae Temple", "Nubian Village"],
+    "languages": ["Arabic", "English", "French"],
+    "maxPricePerHour": 60,
+    "minRating": 4.7
+  },
+  "profile": {
+    "aboutMe": "Born in Aswan and specialized in Luxury Nile Cruises. I craft tailored cruise itineraries with private access to temples and Nubian cultural experiences.",
+    "verified": true,
+    "certifications": [
+      "Licensed Tour Guide — Aswan Tourism Office",
+      "Certificate in Nile River Cruise Management"
+    ],
+    "languages": ["Arabic", "English", "French"],
+    "hourlyRate": 60,
+    "flashInfo": {
+      "experienceYears": 11,
+      "mainCity": "Aswan",
+      "skills": ["Luxury Trip Planning", "Cruise Scheduling", "Cultural Storytelling"]
+    },
+    "gallery": [
+      "/images/trips/ali-hassan/cruise-01.jpg",
+      "/images/trips/ali-hassan/philae-02.jpg"
+    ],
+    "reviews": [
+      {
+        "name": "Jessica L.",
+        "rating": 5,
+        "review": "A magical cruise experience! Ali made us feel like royalty onboard.",
+        "date": "2024-03-12"
+      }
+    ]
+  }
+},
+{
+  "id": 7,
+  "slug": "noor-adel",
+  "card": {
+    "name": "Noor Adel",
+    "avatar": "/images/guides/noor-adel.png",
+    "rating": 4.7,
+    "reviewsCount": 42,
+    "pricePerHour": 35,
+    "specialization": "Nile Cruise Events & Photography Friendly"
+  },
+  "filters": {
+    "serviceLocations": ["Aswan"],
+    "landmarkSpecialties": ["Aswan Nile Cruise", "Nubian Village"],
+    "languages": ["Arabic", "English", "Spanish"],
+    "maxPricePerHour": 35,
+    "minRating": 4.5
+  },
+  "profile": {
+    "aboutMe": "Cruise guide with a focus on nightlife events and portrait photography on deck.",
+    "verified": true,
+    "certifications": ["Tourism Guidance — Fayoum University"],
+    "languages": ["Arabic", "English", "Spanish"],
+    "hourlyRate": 35,
+    "flashInfo": {
+      "experienceYears": 5,
+      "mainCity": "Aswan",
+      "skills": ["Photography Assistance", "Event Hosting"]
+    },
+    "gallery": [
+      "/images/trips/noor-adel/nile-night-01.jpg"
+    ],
+    "reviews": [
+      {
+        "name": "Adam K.",
+        "rating": 5,
+        "review": "Super friendly and took amazing photos for us during sunset!",
+        "date": "2024-06-01"
+      }
+    ]
+  }
+},
+{
+  "id": 8,
+  "slug": "mohamed-selim",
+  "card": {
+    "name": "Mohamed Selim",
+    "avatar": "/images/guides/mohamed-selim.png",
+    "rating": 4.6,
+    "reviewsCount": 34,
+    "pricePerHour": 20,
+    "specialization": "Budget Cruise & Temple Tours"
+  },
+  "filters": {
+    "serviceLocations": ["Aswan"],
+    "landmarkSpecialties": ["Aswan Nile Cruise", "Philae Temple"],
+    "languages": ["Arabic", "English"],
+    "maxPricePerHour": 20,
+    "minRating": 4.4
+  },
+  "profile": {
+    "aboutMe": "Budget-friendly Nile cruise guide. Best value tours for students and backpackers.",
+    "verified": true,
+    "certifications": ["Tour Guide License — Ministry of Tourism"],
+    "languages": ["Arabic", "English"],
+    "hourlyRate": 20,
+    "flashInfo": {
+      "experienceYears": 4,
+      "mainCity": "Aswan",
+      "skills": ["Budget Planning", "Temple Narration"]
+    },
+    "gallery": [
+      "/images/trips/mohamed-selim/cruise-01.jpg"
+    ],
+    "reviews": [
+      {
+        "name": "Oliver P.",
+        "rating": 4.5,
+        "review": "Excellent experience for the price.",
+        "date": "2024-04-19"
+      }
+    ]
+  }
+},
+{
+  "id": 9,
+  "slug": "nadia-ismail",
+  "card": {
+    "name": "Nadia Ismail",
+    "avatar": "/images/guides/nadia-ismail.png",
+    "rating": 4.8,
+    "reviewsCount": 46,
+    "pricePerHour": 45,
+    "specialization": "Historical Temples — Philae & Kom Ombo"
+  },
+  "filters": {
+    "serviceLocations": ["Aswan"],
+    "landmarkSpecialties": ["Philae Temple", "Kom Ombo", "Aswan Nile Cruise"],
+    "languages": ["Arabic", "English", "German"],
+    "maxPricePerHour": 45,
+    "minRating": 4.6
+  },
+  "profile": {
+    "aboutMe": "Temple-focused tours for history lovers. Expect deep historical context & hidden legends.",
+    "verified": true,
+    "certifications": ["Master's Degree — Ancient Civilizations"],
+    "languages": ["Arabic", "English", "German"],
+    "hourlyRate": 45,
+    "flashInfo": {
+      "experienceYears": 9,
+      "mainCity": "Aswan",
+      "skills": ["Deep History Explanation", "Temple Navigation"]
+    },
+    "gallery": [
+      "/images/trips/nadia-ismail/philae-01.jpg"
+    ],
+    "reviews": [
+      {
+        "name": "George M.",
+        "rating": 5,
+        "review": "The amount of knowledge she carries is unbelievable!",
+        "date": "2024-03-27"
+      }
+    ]
+  }
+},
+{
+  "id": 10,
+  "slug": "omer-rashed",
+  "card": {
+    "name": "Omer Rashed",
+    "avatar": "/images/guides/omer-rashed.png",
+    "rating": 4.9,
+    "reviewsCount": 79,
+    "pricePerHour": 70,
+    "specialization": "VIP Multi-day Cruises — Luxor → Aswan"
+  },
+  "filters": {
+    "serviceLocations": ["Aswan"],
+    "landmarkSpecialties": ["Aswan Nile Cruise", "Luxor Temples", "Private Cruise Planning"],
+    "languages": ["Arabic", "English", "Russian"],
+    "maxPricePerHour": 70,
+    "minRating": 4.8
+  },
+  "profile": {
+    "aboutMe": "I specialize in multi-day luxury cruises with private access and full itinerary planning.",
+    "verified": true,
+    "certifications": [
+      "Luxury Cruise Certification",
+      "Egypt Tourism Authority License"
+    ],
+    "languages": ["Arabic", "English", "Russian"],
+    "hourlyRate": 70,
+    "flashInfo": {
+      "experienceYears": 13,
+      "mainCity": "Aswan",
+      "skills": ["Full Trip Planning", "VIP Packages", "Private Rooms Negotiations"]
+    },
+    "gallery": [
+      "/images/trips/omer-rashed/cruise-vip-01.jpg",
+      "/images/trips/omer-rashed/cruise-vip-02.jpg"
+    ],
+    "reviews": [
+      {
+        "name": "Natalia B.",
+        "rating": 5,
+        "review": "VIP experience with private access and room upgrades!",
+        "date": "2024-06-08"
+      }
+    ]
+  }
+}
+
+]
