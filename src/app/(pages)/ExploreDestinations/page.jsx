@@ -121,7 +121,7 @@ const normalizeImagePath = (img = "") => {
 //
 const fetchDestinations = async () => {
   try {
-    const res = await axios.get("/data/destinations.json");
+    const res = await axios.get("/data/Destinations.json");
     const data = Array.isArray(res.data) ? res.data : [];
 
     const formatted = data.map((dest) => ({
@@ -199,7 +199,7 @@ const DestinationCard = ({ title, subtitle, imageUrl, slug }) => (
         href={`/destinations/${slug}`}
         className={`mt-auto align-self-start ${styles.ctaLink}`}
       >
-        View Guides &gt;
+        More Details 
       </Link>
     </div>
   </div>
