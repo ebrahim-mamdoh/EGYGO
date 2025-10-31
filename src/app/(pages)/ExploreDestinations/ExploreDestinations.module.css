@@ -1,109 +1,355 @@
-page.module.css
-/* --- Global & Typography --- */
+/* === MODERN PREMIUM TRAVEL PLATFORM DESIGN === */
+/* Color Palette: Primary #00797C, Secondary #0A2342, Accent #F2C94C */
 
+/* --- Hero Section --- */
+.heroSection {
+  position: relative;
+  background: linear-gradient(135deg, #0A2342, #00797C);
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  margin-bottom: 4rem;
+  overflow: hidden;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(10, 35, 66, 0.8), rgba(0, 121, 124, 0.6));
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  animation: fadeInUp 1s ease-out;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.02em;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 300;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Section Styling --- */
+.section {
+  margin-bottom: 5rem;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: #0A2342;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #00797C, #F2C94C);
+  border-radius: 2px;
+}
+
+/* --- CTA Link --- */
 .ctaLink {
-  color: #00a67e; /* Teal/Green CTA Color */
+  color: #F2C94C;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .ctaLink:hover {
-  color: #007a5c;
-  text-decoration: underline;
+  color: #e6b800;
+  text-decoration: none;
+  transform: translateX(4px);
 }
 
-/* --- Destination Card --- */
+.ctaLink::after {
+  content: '→';
+  transition: transform 0.3s ease;
+}
 
+.ctaLink:hover::after {
+  transform: translateX(4px);
+}
+
+/* --- Destination Cards --- */
 .destinationCard {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  overflow: hidden; /* Ensures image corners are clipped */
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.destinationCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent, rgba(0, 121, 124, 0.02));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
 }
 
 .destinationCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transform: scale(1.02) translateY(-8px);
+  box-shadow: 0 20px 48px rgba(0, 121, 124, 0.15);
+}
+
+.destinationCard:hover::before {
+  opacity: 1;
+}
+
+.cardImageWrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
 }
 
 .cardImage {
-  /* Using object-fit to maintain aspect ratio and fill the space */
   object-fit: cover;
-  /* Fixed height for visual consistency across cards */
-  height: 200px; 
+  height: 250px;
   width: 100%;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.destinationCard:hover .cardImage {
+  transform: scale(1.08);
+}
+
+.cardImageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(10, 35, 66, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.destinationCard:hover .cardImageOverlay {
+  opacity: 1;
+}
+
+.cardBody {
+  padding: 1.75rem;
+  position: relative;
+  z-index: 2;
 }
 
 .cardTitle {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  color: #212529;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #0A2342;
+  line-height: 1.3;
 }
 
 .cardText {
-  font-size: 0.9rem;
-  color: #6c757d; /* Bootstrap's text-muted color */
-  line-height: 1.5;
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
-/* --- Governorate Tile --- */
-
+/* --- Governorate Tiles --- */
 .governorateTile {
-  border-radius: 12px;
-  padding: 1.5rem 1rem;
-  transition: all 0.3s ease;
-  border: 1px solid transparent; /* Prevents layout shift on hover border */
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 2px solid transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.governorateTile::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 121, 124, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .governorateTile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-color: #ddd;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 121, 124, 0.12);
+  border-color: rgba(0, 121, 124, 0.2);
+}
+
+.governorateTile:hover::before {
+  opacity: 1;
 }
 
 .tileIcon {
-  font-size: 2.5rem;
-  margin-bottom: 0.75rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
   line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.governorateTile:hover .tileIcon {
+  transform: scale(1.1);
 }
 
 .tileTitle {
-  font-size: 1.15rem;
-  margin-bottom: 0.25rem;
-  color: #333;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #0A2342;
+  position: relative;
+  z-index: 2;
 }
 
 .tileDesc {
-  font-size: 0.85rem;
-  color: #555;
-  line-height: 1.4;
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+  text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
-/* Pastel Background Colors for Tiles */
+/* Enhanced Governorate Tile Colors */
 .tileDefault {
-  background-color: #f8f9fa; /* Bootstrap's 'light' gray */
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
 }
+
 .tileGiza {
-  background-color: #e0f2f1; /* Mint */
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+  border-color: rgba(34, 197, 94, 0.2);
 }
+
 .tileCairo {
-  background-color: #fdf8e1; /* Pale Yellow/Sand */
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+  border-color: rgba(245, 158, 11, 0.2);
 }
+
 .tileAlexandria {
-  background-color: #e6f7ff; /* Pale Blue */
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border-color: rgba(59, 130, 246, 0.2);
 }
+
 .tileLuxor {
-  background-color: #fff8f0; /* Pale Peach */
+  background: linear-gradient(135deg, #fff7ed, #fed7aa);
+  border-color: rgba(249, 115, 22, 0.2);
 }
+
 .tileAswan {
-  background-color: #f5f5f5; /* Light Beige/Gray */
+  background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+  border-color: rgba(107, 114, 128, 0.2);
 }
+
 .tileSharm {
-  background-color: #fce4ec; /* Pale Pink */
+  background: linear-gradient(135deg, #fdf2f8, #fce7f3);
+  border-color: rgba(236, 72, 153, 0.2);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 60px 0;
+    margin-bottom: 3rem;
+  }
+  
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .section {
+    margin-bottom: 3rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cardBody {
+    padding: 1.5rem;
+  }
+  
+  .cardTitle {
+    font-size: 1.25rem;
+  }
+  
+  .governorateTile {
+    padding: 1.5rem 1rem;
+  }
+  
+  .tileIcon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cardImage {
+    height: 200px;
+  }
+  
+  .tileIcon {
+    font-size: 2rem;
+  }
+  
+  .tileTitle {
+    font-size: 1.1rem;
+  }
 }

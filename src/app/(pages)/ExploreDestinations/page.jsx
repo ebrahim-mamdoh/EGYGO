@@ -180,16 +180,19 @@ const ErrorMessage = ({ message }) => (
  */
 const DestinationCard = ({ title, subtitle, imageUrl, slug }) => (
   <div className={`card h-100 border-0 ${styles.destinationCard}`}>
-    <Image
-      src={imageUrl}
-      alt={`View of ${title}`}
-      width={400}
-      height={250}
-      className={`card-img-top ${styles.cardImage}`}
-      placeholder="blur"
-      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvdsaywAAAABJRU5ErkJggg==" // Simple grey blur
-    />
-    <div className="card-body d-flex flex-column">
+    <div className={styles.cardImageWrapper}>
+      <Image
+        src={imageUrl}
+        alt={`View of ${title}`}
+        width={400}
+        height={250}
+        className={`card-img-top ${styles.cardImage}`}
+        placeholder="blur"
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvdsaywAAAABJRU5ErkJggg==" // Simple grey blur
+      />
+      <div className={styles.cardImageOverlay}></div>
+    </div>
+    <div className={`card-body d-flex flex-column ${styles.cardBody}`}>
       <h5 className={`card-title fw-bold ${styles.cardTitle}`}>{title}</h5>
       <p className={`card-text ${styles.cardText} mb-3`}>{subtitle}</p>
       <Link
@@ -252,45 +255,59 @@ export default function ExploreDestinations() {
   const isLoading = isLoadingDestinations || isLoadingGovernorates;
 
   return (
-    <div className="container my-4 my-md-5">
-      {/* Section 1: Popular Destinations */}
-      <section className="mb-5">
-        <h1 className="text-center fw-bold mb-4">
-          Explore Popular Destinations in Egypt
-        </h1>
-        {isLoading ? (
-          <LoadingSpinner />
-        ) : (
-          <div className="row">
-            {destinations.map((dest) => (
-              <div className="col-lg-4 col-md-6 mb-4" key={dest.slug}>
-                <DestinationCard {...dest} />
-              </div>
-            ))}
+    <>
+      {/* Hero Section */}
+      <section className={styles.heroSection}>
+        <div className="container">
+          <div className={styles.heroContent}>
+            <h1 className={styles.heroTitle}>
+              Explore Egypt's Top Destinations
+            </h1>
+            <p className={styles.heroSubtitle}>
+              Discover the timeless wonders and hidden gems of Egypt, from ancient monuments to pristine beaches
+            </p>
           </div>
-        )}
+        </div>
       </section>
 
-      <hr className="d-none d-md-block" />
+      <div className="container my-4 my-md-5">
+        {/* Section 1: Popular Destinations */}
+        <section className={`mb-5 ${styles.section}`}>
+          <h2 className={styles.sectionTitle}>
+            Popular Destinations
+          </h2>
+          {isLoading ? (
+            <LoadingSpinner />
+          ) : (
+            <div className="row g-4">
+              {destinations.map((dest) => (
+                <div className="col-lg-4 col-md-6 mb-4" key={dest.slug}>
+                  <DestinationCard {...dest} />
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
 
-      {/* Section 2: Explore Governorates */}
-      <section className="mt-4 pt-md-3">
-        <h2 className="text-center fw-bold mb-4">
-          Explore Egyptian Governorates
-        </h2>
-        {isLoading ? (
-          <LoadingSpinner />
-        ) : (
-          <div className="row">
-            {governorates.map((gov) => (
-              <div className="col-lg-4 col-md-6 mb-4" key={gov.name}>
-                <GovernorateTile {...gov} />
-              </div>
-            ))}
-          </div>
-        )}
-      </section>
-    </div>
+        {/* Section 2: Explore Governorates */}
+        <section className={`mt-4 pt-md-3 ${styles.section}`}>
+          <h2 className={styles.sectionTitle}>
+            Explore Egyptian Governorates
+          </h2>
+          {isLoading ? (
+            <LoadingSpinner />
+          ) : (
+            <div className="row g-4">
+              {governorates.map((gov) => (
+                <div className="col-lg-4 col-md-6 mb-4" key={gov.name}>
+                  <GovernorateTile {...gov} />
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+      </div>
+    </>
   );
 }
 
