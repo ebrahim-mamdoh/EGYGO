@@ -14,6 +14,7 @@
     "agora-rtc-sdk-ng": "^4.24.2",
     "axios": "^1.12.2",
     "bootstrap": "^5.3.8",
+    "cors": "^2.8.5",
     "formik": "^2.4.6",
     "generate-react-cli": "^9.1.0",
     "next": "^15.3.8",

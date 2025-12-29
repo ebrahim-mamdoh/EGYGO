@@ -58,7 +58,7 @@ const Footer = () => {
           <div className={styles.linkColumn}>
             <h3>Explore</h3>
             <ul className={styles.linkList}>
-              <li><Link href="/attractions">Attractions</Link></li>
+              <li><Link href="/ExploreDestinations">Attractions</Link></li>
               <li><Link href="/hotels">Hotels</Link></li>
               <li><Link href="/restaurants">Restaurants</Link></li>
               <li><Link href="/events">Events</Link></li>

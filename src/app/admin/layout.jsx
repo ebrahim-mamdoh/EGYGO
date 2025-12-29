@@ -40,12 +40,9 @@ export default function AdminLayout({ children }) {
                     setIsAuthorized(true);
                 } else {
                     // Not an admin
-                    // router.push('/'); // Redirect to home or show denied
-                    // For now, allow implementation to proceed, but warned.
-                    // Ideally: setIsAuthorized(false)
-                    // But since I don't know the exact user shape, I'll be lenient OR check API
-                    setIsAuthorized(true);
-                    console.log('User role check:', user.role);
+                    console.warn('Access denied: User is not an admin', user);
+                    setIsAuthorized(false);
+                    router.push('/admin/login');
                 }
             } else {
                 // Fallback: verification via API if context is stale/empty but token exists

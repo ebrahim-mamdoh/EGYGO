@@ -50,6 +50,15 @@ adminClient.interceptors.response.use(
             }
         }
 
+        // Handle 403 Forbidden (Valid token but insufficient permissions)
+        if (error.response?.status === 403) {
+            if (typeof window !== 'undefined') {
+                // You might want to keep the session but redirect out of admin
+                // Or just force logout to switch accounts
+                window.location.href = '/admin/login?error=forbidden';
+            }
+        }
+
         return Promise.reject(error);
     }
 );
