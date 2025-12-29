@@ -9,7 +9,11 @@ import { AuthProvider } from "@/app/context/AuthContext";
 import SocketInitializer from "@/app/components/SocketInitializer";
 
 import ConditionalFooter from "@/app/components/ConditionalFooter";
-import AIChatWidget from "@/components/chat/AIChatWidget";
+import dynamic from "next/dynamic";
+
+const AIChatWidget = dynamic(() => import("@/components/chat/AIChatWidget"), {
+  ssr: false
+});
 
 // Montserrat font with optimized subsets and weights
 const montserrat = Montserrat({

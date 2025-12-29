@@ -18,13 +18,7 @@ const LoginModal = ({ isOpen, onClose }) => {
     const [serverError, setServerError] = useState(null);
     const [showPassword, setShowPassword] = useState(false);
 
-    // Reset form when modal opens
-    useEffect(() => {
-        if (isOpen) {
-            setServerError(null);
-            formik.resetForm();
-        }
-    }, [isOpen, formik]);
+
 
     // Close on Escape key
     useEffect(() => {
@@ -84,6 +78,14 @@ const LoginModal = ({ isOpen, onClose }) => {
             }
         },
     });
+
+    // Reset form when modal opens
+    useEffect(() => {
+        if (isOpen) {
+            setServerError(null);
+            formik.resetForm();
+        }
+    }, [isOpen, formik]);
 
     if (!isOpen) return null;
 

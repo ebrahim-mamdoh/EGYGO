@@ -2,19 +2,27 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import ReactMarkdown from 'react-markdown';
 import styles from './AIChatWidget.module.css';
 import axios from 'axios';
 
-import { useRouter } from 'next/navigation';
+
 
 export default function AIChatWidget() {
-    const router = useRouter();
+
     const [isOpen, setIsOpen] = useState(false);
+    // Initial welcome message
     const [messages, setMessages] = useState([
-        { id: 1, text: "مرحباً! أنا نفرتيتي، مرشدتك السياحية الذكية. كيف يمكنني مساعدتك في رحلتك اليوم؟", sender: 'bot', type: 'text' }
+        {
+            id: 1,
+            text: "مرحباً! أنا نفرتيتي، مرشدتك السياحية الذكية. كيف يمكنني مساعدتك في رحلتك اليوم؟",
+            sender: 'bot',
+            type: 'text'
+        }
     ]);
     const [inputText, setInputText] = useState("");
-    const [isTyping, setIsTyping] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const messagesEndRef = useRef(null);
 
     const scrollToBottom = () => {
@@ -23,7 +31,7 @@ export default function AIChatWidget() {
 
     useEffect(() => {
         scrollToBottom();
-    }, [messages]);
+    }, [messages, isLoading]);
 
     const handleSendMessage = async () => {
         if (!inputText.trim()) return;
@@ -35,68 +43,63 @@ export default function AIChatWidget() {
             type: 'text'
         };
 
+        // Add user message to state
         setMessages(prev => [...prev, newUserMessage]);
         setInputText("");
-        setIsTyping(true);
+        setIsLoading(true);
 
         try {
+            // Prepare history for API
+            // Map 'sender' to 'role' (user -> user, bot -> model)
+            const history = messages.map(msg => ({
+                role: msg.sender === 'user' ? 'user' : 'model',
+                content: msg.text // Assuming 'text' holds the content
+            }));
+
             const response = await axios.post('/api/chat', {
-                message: newUserMessage.text
+                message: newUserMessage.text,
+                history: history
             });
 
-            if (response.data && response.data.success) {
-                const { type, content, reply } = response.data;
+            const data = response.data;
 
-                let newBotMessage = {
+            if (data.success) {
+                const newBotMessage = {
                     id: Date.now() + 1,
                     sender: 'bot',
+                    type: 'text',
+                    text: data.reply,
+                    places: data.data || [], // Store places if available
+                    source: data.source
                 };
-
-                if (type === 'places' && Array.isArray(content)) {
-                    newBotMessage.type = 'places';
-                    newBotMessage.places = content;
-                    // Optional: Add a text intro if needed, or just render cards
-                    newBotMessage.text = "وجدنا لك هذه الأماكن المميزة:";
-                } else {
-                    newBotMessage.type = 'text';
-                    // Fallback to 'reply' or 'content' if it's a string
-                    newBotMessage.text = reply || (typeof content === 'string' ? content : "عذراً، لم أستطع فهم الرد.");
-                }
-
                 setMessages(prev => [...prev, newBotMessage]);
             } else {
-                throw new Error('Invalid response');
+                throw new Error('Unsuccessful response from server');
             }
+
         } catch (error) {
             console.error('Chat Error:', error);
             const errorMessage = {
                 id: Date.now() + 1,
-                text: error.message === 'Network Error'
-                    ? "يبدو أن هناك مشكلة في الاتصال بالخادم. تأكد من تشغيل الباك إند."
-                    : "عذراً، حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.",
+                text: "عذراً، حدث خطأ أثناء المعالجة. يرجى المحاولة مرة أخرى.",
                 sender: 'bot',
                 isError: true,
                 type: 'text'
             };
             setMessages(prev => [...prev, errorMessage]);
         } finally {
-            setIsTyping(false);
+            setIsLoading(false);
         }
     };
 
     const handleKeyPress = (e) => {
-        if (e.key === 'Enter') {
+        if (e.key === 'Enter' && !isLoading) {
             handleSendMessage();
         }
     };
 
     const toggleChat = () => {
         setIsOpen(!isOpen);
-    };
-
-    const handlePlaceClick = (placeId) => {
-        setIsOpen(false); // Close chat to view page
-        router.push(`/place/${placeId}`);
     };
 
     return (
@@ -134,19 +137,38 @@ export default function AIChatWidget() {
                                 key={msg.id}
                                 className={`${styles.message} ${msg.sender === 'user' ? styles.sent : styles.received} ${msg.isError ? styles.error : ''}`}
                                 dir="auto"
-                                style={msg.type === 'places' ? { background: 'transparent', padding: 0 } : {}}
                             >
-                                {msg.type === 'text' && msg.text}
+                                {/* Text Content with Markdown */}
+                                <div className={styles.markdownContent}>
+                                    <ReactMarkdown>{msg.text}</ReactMarkdown>
+                                </div>
 
-                                {msg.type === 'places' && (
+                                {/* Source Badge (Optional) */}
+                                {msg.source === 'database' && (
+                                    <div className={styles.verifiedBadge}>
+                                        <span>✓ Verified Info</span>
+                                    </div>
+                                )}
+
+                                {/* Places Carousel */}
+                                {msg.places && msg.places.length > 0 && (
                                     <div className={styles.placesContainer}>
-                                        {msg.text && <div style={{ color: '#fff', marginBottom: '8px', padding: '0 4px' }}>{msg.text}</div>}
                                         {msg.places.map((place, idx) => (
-                                            <div key={idx} className={styles.placeCard}>
+                                            <div key={place._id || place.id || idx} className={styles.placeCard}>
+                                                {place.images && place.images.length > 0 && (
+                                                    <div className={styles.placeImageWrapper}>
+                                                        <Image
+                                                            src={place.images[0]}
+                                                            alt={place.name}
+                                                            fill
+                                                            style={{ objectFit: 'cover' }}
+                                                        />
+                                                    </div>
+                                                )}
                                                 <div className={styles.placeContent}>
                                                     <div className={styles.placeHeader}>
-                                                        <h4 className={styles.placeName}>{place.name}</h4>
-                                                        {place.category && <span className={styles.placeCategory}>{place.category}</span>}
+                                                        <h4 className={styles.placeName} title={place.name}>{place.name}</h4>
+                                                        {(place.category || place.type) && <span className={styles.placeCategory}>{place.category || place.type}</span>}
                                                     </div>
 
                                                     {place.province && (
@@ -155,20 +177,27 @@ export default function AIChatWidget() {
                                                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                                                 <circle cx="12" cy="10" r="3"></circle>
                                                             </svg>
-                                                            {place.province}
+                                                            {typeof place.province === 'object' ? place.province.name : place.province}
                                                         </div>
                                                     )}
 
-                                                    <p className={styles.placeDescription}>
-                                                        {place.description || "استمتع بزيارة هذا المكان الرائع وتعرف على تاريخه."}
-                                                    </p>
+                                                    {place.rating > 0 && (
+                                                        <div className={styles.ratingStars}>
+                                                            {'★'.repeat(Math.round(place.rating))}
+                                                            {'☆'.repeat(5 - Math.round(place.rating))}
+                                                        </div>
+                                                    )}
 
-                                                    <button
+                                                    {/* Description removed for compactness in card, or kept short */}
+                                                    {/* <p className={styles.placeDescription}>{place.description}</p> */}
+
+                                                    <Link
+                                                        href={`/place/${place._id || place.id}`}
                                                         className={styles.viewBtn}
-                                                        onClick={() => handlePlaceClick(place._id || place.id)}
+                                                        onClick={() => setIsOpen(false)}
                                                     >
                                                         عرض التفاصيل
-                                                    </button>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         ))}
@@ -176,7 +205,8 @@ export default function AIChatWidget() {
                                 )}
                             </div>
                         ))}
-                        {isTyping && (
+
+                        {isLoading && (
                             <div className={`${styles.message} ${styles.received}`}>
                                 <span className={styles.typingDot}>.</span>
                                 <span className={styles.typingDot}>.</span>
@@ -192,16 +222,17 @@ export default function AIChatWidget() {
                             <input
                                 type="text"
                                 className={styles.input}
-                                placeholder="Chat Place holder"
+                                placeholder="Chat with Nefertiti..."
                                 value={inputText}
                                 onChange={(e) => setInputText(e.target.value)}
                                 onKeyPress={handleKeyPress}
+                                disabled={isLoading}
                                 dir="auto"
                             />
                             <button
                                 className={styles.sendBtn}
                                 onClick={handleSendMessage}
-                                disabled={!inputText.trim()}
+                                disabled={!inputText.trim() || isLoading}
                             >
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M22 2L11 13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
